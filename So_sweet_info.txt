@@ -1,0 +1,33 @@
+1. Тестовые значения:
+{
+  "fullName": "Ivan",
+  "email": "iv@mail.ru",
+  "phone": "+79997776655",
+  "address": "St. Petersburg"
+}
+
+2. Библиотеки:
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.PostgreSQL;
+using Microsoft.EntityFrameworkCore.Tools;
+
+3. Файл appsettings.json:
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "ContactApiConnectionString": "Host=localhost; Database=ContactsDb; Username=postgres; Password=rhfcbkjdf29"
+  }
+}
+
+4. Tools (Средства) -> Диспетчер пакетов NuGet -> Консоль диспетчера пакетов -> Ввод след. команд:
+
+Add-Migration "Название миграции" :: Эмиграция ради кайфа, что бы создавалась БД
+Update-Database :: Ну, тут понятно че да как
+
+Ссылка на источник: https://www.youtube.com/watch?v=3NWT9k-6xGg
